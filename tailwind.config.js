@@ -5,7 +5,12 @@ export default {
     "./src/**/*.{js,ts,jsx,tsx}",
   ],
   theme: {
-    extend: {},
+    extend: {
+      fontFamily: {
+        supermercado: ['Supermercado One', 'cursive'],
+        playfair: ['Playfair Display', 'serif'],
+      },
+    },
   },
   plugins: [],
 }
