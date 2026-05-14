@@ -113,7 +113,7 @@ const Navbar = () => {
                        `}
                         />
                     </button>
-                    <div className={`absolute bg-blue-900 text-white mt-6 w-full left-0 transition-all duration-200 ease-in-out overflow-hidden
+                    <div className={`absolute bg-blue-900 text-white mt-6 w-full py-2 left-0 transition-all duration-200 ease-in-out overflow-hidden
                         ${open
                             ? "opacity-100 translate-y-0 max-h-screen"
                             : "opacity-0 -translate-y-2 max-h-0"
@@ -121,135 +121,194 @@ const Navbar = () => {
                          `}
                     >
                         <div>
-                            <button onClick={() => toggleDropdown('About')} className="flex items-center gap-1 py-2">
-                                <p className='pl-6 pr-1 py-1 text-md'>About Us</p>
+                            <button onClick={() => toggleDropdown('About')} className={`flex font-share uppercase text-lg hover:text-gray-500 items-center gap-1 py-2
+                            ${dropdowns.About ? "text-gray-400 " : ""}
+                            `}>
+                                <p className='pl-6 pr-1 text-lg'>About Us</p>
                                 <IoChevronDownOutline />
                             </button>
                             {/* use dropdowns.About to call useState true or false */}
                             {dropdowns.About && (
                                 <div className=" left-0 w-full rounded-sm bg-blue-900 text-white transition-all duration-200 cursor-pointer">
-                                    <p className="px-7 py-2 hover:bg-blue-950">History</p>
-                                    <p className="px-7 py-2 hover:bg-blue-950">
-                                        License-and-Accreditation
-                                    </p>
-                                    <p className="px-7 py-2 hover:bg-blue-950">
+                                    <a href=""><p className="pl-9 py-2 text-md  hover:text-gray-400">History</p></a>
+                                    <a href="">
+                                        <p className="pl-9 py-2 text-md hover:text-gray-400">
+                                            License-and-Accreditation
+                                        </p>
+                                    </a>
+                                    <a href=""> <p className="pl-9 py-2 text-md hover:text-gray-400">
                                         Strategic-plan-2024-2029
-                                    </p>
-                                    <p className="px-7 py-2 hover:bg-blue-950">
-                                        Who's Who at PIKT
-                                    </p>
-                                    <p className="px-7 py-2 hover:bg-blue-950">
-                                        Career Opportunities
-                                    </p>
-                                    <p className="px-7 py-2 hover:bg-blue-950">
-                                        FAQs
-                                    </p>
+                                    </p></a>
+                                    <a href="">
+                                        <p className="pl-9 py-2 text-md hover:text-gray-400">
+                                            Who's Who at PIKT
+                                        </p>
+                                    </a>
+                                    <a href="">
+                                        <p className="pl-9 py-2 text-md hover:text-gray-400">
+                                            Career Opportunities
+                                        </p>
+                                    </a>
+                                    <a href="">
+                                        <p className="pl-9 py-2 text-md hover:text-gray-400">
+                                            FAQs
+                                        </p>
+                                    </a>
                                 </div>
                             )}
                         </div>
                         <div>
-                            <button onClick={() => toggleDropdown('Academics')} className="flex items-center gap-1 py-2">
-                                <p className='pl-6 text-md pr-1 py-1'>Academics</p>
+                            <button onClick={() => toggleDropdown('Academics')} className={`flex font-share uppercase text-lg hover:text-gray-500 items-center gap-1 py-2
+                            ${dropdowns.Academics ? "text-gray-400 " : ""}
+                            `}>
+                                <p className='pl-6 pr-1 text-lg'>Academics</p>
                                 <IoChevronDownOutline />
                             </button>
+                            {/* use dropdowns.About to call useState true or false */}
                             {dropdowns.Academics && (
-                                <div className=" left-0 w-full rounded-sm bg-blue-900 text-white cursor-pointer">
-                                    <p className="px-7 py-2 hover:bg-blue-950">History</p>
-                                    <p className="px-7 py-2 hover:bg-blue-950">
-                                        License-and-Accreditation
-                                    </p>
-                                    <p className="px-7 py-2 hover:bg-blue-950">
+                                <div className=" left-0 w-full rounded-sm bg-blue-900 text-white transition-all duration-200 cursor-pointer">
+                                    <a href=""><p className="pl-9 py-2 text-md  hover:text-gray-400">History</p></a>
+                                    <a href="">
+                                        <p className="pl-9 py-2 text-md hover:text-gray-400">
+                                            License-and-Accreditation
+                                        </p>
+                                    </a>
+                                    <a href=""> <p className="pl-9 py-2 text-md hover:text-gray-400">
                                         Strategic-plan-2024-2029
-                                    </p>
-                                    <p className="px-7 py-2 hover:bg-blue-950">
-                                        Who's Who at PIKT
-                                    </p>
-                                    <p className="px-7 py-2 hover:bg-blue-950">
-                                        Career Opportunities
-                                    </p>
-
+                                    </p></a>
+                                    <a href="">
+                                        <p className="pl-9 py-2 text-md hover:text-gray-400">
+                                            Who's Who at PIKT
+                                        </p>
+                                    </a>
+                                    <a href="">
+                                        <p className="pl-9 py-2 text-md hover:text-gray-400">
+                                            Career Opportunities
+                                        </p>
+                                    </a>
+                                    <a href="">
+                                        <p className="pl-9 py-2 text-md hover:text-gray-400">
+                                            FAQs
+                                        </p>
+                                    </a>
                                 </div>
                             )}
                         </div>
                         <div>
-                            <button onClick={() => toggleDropdown('Admission')} className="flex items-center gap-1 py-2">
-                                <p className='pl-6 text-md pr-1 py-1'>Admission</p>
+                            <button onClick={() => toggleDropdown('Admission')} className={`flex font-share uppercase text-lg hover:text-gray-500 items-center gap-1 py-2
+                            ${dropdowns.Admission ? "text-gray-400 " : ""}
+                            `}>
+                                <p className='pl-6 pr-1 text-lg'>Admission</p>
                                 <IoChevronDownOutline />
                             </button>
+                            {/* use dropdowns.About to call useState true or false */}
                             {dropdowns.Admission && (
-                                <div className=" left-0 w-full rounded-sm bg-blue-900 text-white cursor-pointer">
-                                    <p className="px-7 py-2 hover:bg-blue-950">History</p>
-                                    <p className="px-7 py-2 hover:bg-blue-950">
-                                        License-and-Accreditation
-                                    </p>
-                                    <p className="px-7 py-2 hover:bg-blue-950">
+                                <div className=" left-0 w-full rounded-sm bg-blue-900 text-white transition-all duration-200 cursor-pointer">
+                                    <a href=""><p className="pl-9 py-2 text-md  hover:text-gray-400">History</p></a>
+                                    <a href="">
+                                        <p className="pl-9 py-2 text-md hover:text-gray-400">
+                                            License-and-Accreditation
+                                        </p>
+                                    </a>
+                                    <a href=""> <p className="pl-9 py-2 text-md hover:text-gray-400">
                                         Strategic-plan-2024-2029
-                                    </p>
-                                    <p className="px-7 py-2 hover:bg-blue-950">
-                                        Who's Who at PIKT
-                                    </p>
-                                    <p className="px-7 py-2 hover:bg-blue-950">
-                                        Career Opportunities
-                                    </p>
-
+                                    </p></a>
+                                    <a href="">
+                                        <p className="pl-9 py-2 text-md hover:text-gray-400">
+                                            Who's Who at PIKT
+                                        </p>
+                                    </a>
+                                    <a href="">
+                                        <p className="pl-9 py-2 text-md hover:text-gray-400">
+                                            Career Opportunities
+                                        </p>
+                                    </a>
+                                    <a href="">
+                                        <p className="pl-9 py-2 text-md hover:text-gray-400">
+                                            FAQs
+                                        </p>
+                                    </a>
                                 </div>
                             )}
                         </div>
                         <div>
-                            <button onClick={() => toggleDropdown('Tuition')} className="flex items-center gap-1 py-2">
-                                <p className='pl-6 text-md pr-1 py-1'>Tuition</p>
+                            <button onClick={() => toggleDropdown('Tuition')} className={`flex font-share uppercase text-lg hover:text-gray-500 items-center gap-1 py-2
+                            ${dropdowns.Tuition ? "text-gray-400 " : ""}
+                            `}>
+                                <p className='pl-6 pr-1 text-lg'>Tuition</p>
                                 <IoChevronDownOutline />
                             </button>
+                            {/* use dropdowns.About to call useState true or false */}
                             {dropdowns.Tuition && (
-                                <div className=" left-0 w-full rounded-sm bg-blue-900 text-white cursor-pointer">
-                                    <p className="px-7 py-2 hover:bg-blue-950">History</p>
-                                    <p className="px-7 py-2 hover:bg-blue-950">
-                                        License-and-Accreditation
-                                    </p>
-                                    <p className="px-7 py-2 hover:bg-blue-950">
+                                <div className=" left-0 w-full rounded-sm bg-blue-900 text-white transition-all duration-200 cursor-pointer">
+                                    <a href=""><p className="pl-9 py-2 text-md  hover:text-gray-400">History</p></a>
+                                    <a href="">
+                                        <p className="pl-9 py-2 text-md hover:text-gray-400">
+                                            License-and-Accreditation
+                                        </p>
+                                    </a>
+                                    <a href=""> <p className="pl-9 py-2 text-md hover:text-gray-400">
                                         Strategic-plan-2024-2029
-                                    </p>
-                                    <p className="px-7 py-2 hover:bg-blue-950">
-                                        Who's Who at PIKT
-                                    </p>
+                                    </p></a>
+                                    <a href="">
+                                        <p className="pl-9 py-2 text-md hover:text-gray-400">
+                                            Who's Who at PIKT
+                                        </p>
+                                    </a>
                                 </div>
                             )}
                         </div>
                         <div>
-                            <button onClick={() => toggleDropdown('Scholarship')} className="flex items-center gap-1 py-2">
-                                <p className='pl-6 text-md pr-1 py-1'>Scholarship</p>
+                            <button onClick={() => toggleDropdown('Scholarship')} className={`flex font-share uppercase text-lg hover:text-gray-500 items-center gap-1 py-2
+                            ${dropdowns.Scholarship ? "text-gray-400 " : ""}
+                            `}>
+                                <p className='pl-6 pr-1 text-lg'>Scholarship</p>
                                 <IoChevronDownOutline />
                             </button>
+                            {/* use dropdowns.About to call useState true or false */}
                             {dropdowns.Scholarship && (
-                                <div className=" left-0 w-full rounded-sm bg-blue-900 text-white cursor-pointer">
-                                    <p className="px-7 py-2 hover:bg-blue-950">History</p>
-                                    <p className="px-7 py-2 hover:bg-blue-950">
-                                        License-and-Accreditation
-                                    </p>
-                                    <p className="px-7 py-2 hover:bg-blue-950">
+                                <div className=" left-0 w-full rounded-sm bg-blue-900 text-white transition-all duration-200 cursor-pointer">
+                                    <a href=""><p className="pl-9 py-2 text-md  hover:text-gray-400">History</p></a>
+                                    <a href="">
+                                        <p className="pl-9 py-2 text-md hover:text-gray-400">
+                                            License-and-Accreditation
+                                        </p>
+                                    </a>
+                                    <a href=""> <p className="pl-9 py-2 text-md hover:text-gray-400">
                                         Strategic-plan-2024-2029
-                                    </p>
+                                    </p></a>
+                                    <a href="">
+                                        <p className="pl-9 py-2 text-md hover:text-gray-400">
+                                            Who's Who at PIKT
+                                        </p>
+                                    </a>
                                 </div>
                             )}
                         </div>
                         <div>
-                            <button onClick={() => toggleDropdown('Apply')} className="flex items-center gap-1 py-2">
-                                <p className='pl-6 text-md pr-1 py-1'>Apply</p>
+                            <button onClick={() => toggleDropdown('Apply')} className={`flex font-share uppercase text-lg hover:text-gray-500 items-center gap-1 py-2
+                            ${dropdowns.Apply ? "text-gray-400 " : ""}
+                            `}>
+                                <p className='pl-6 pr-1 text-lg'>Apply</p>
                                 <IoChevronDownOutline />
                             </button>
+                            {/* use dropdowns.About to call useState true or false */}
                             {dropdowns.Apply && (
-                                <div className=" left-0 w-full rounded-sm bg-blue-900 text-white cursor-pointer">
-                                    <p className="px-7 py-2 hover:bg-blue-950">History</p>
-                                    <p className="px-7 py-2 hover:bg-blue-950">
-                                        License-and-Accreditation
-                                    </p>
-                                    <p className="px-7 py-2 hover:bg-blue-950">
+                                <div className=" left-0 w-full rounded-sm bg-blue-900 text-white transition-all duration-200 cursor-pointer">
+                                    <a href=""><p className="pl-9 py-2 text-md  hover:text-gray-400">History</p></a>
+                                    <a href="">
+                                        <p className="pl-9 py-2 text-md hover:text-gray-400">
+                                            License-and-Accreditation
+                                        </p>
+                                    </a>
+                                    <a href=""> <p className="pl-9 py-2 text-md hover:text-gray-400">
                                         Strategic-plan-2024-2029
-                                    </p>
-                                    <p className="px-7 py-2 hover:bg-blue-950">
-                                        Who's Who at PIKT
-                                    </p>
-
+                                    </p></a>
+                                    <a href="">
+                                        <p className="pl-9 py-2 text-md hover:text-gray-400">
+                                            Who's Who at PIKT
+                                        </p>
+                                    </a>
                                 </div>
                             )}
                         </div>

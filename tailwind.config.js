@@ -9,7 +9,9 @@ export default {
       fontFamily: {
         supermercado: ['Supermercado One', 'cursive'],
         playfair: ['Playfair Display', 'serif'],
+        share: ['"Share Tech"', 'sans-serif'],
       },
+
     },
   },
   plugins: [],
