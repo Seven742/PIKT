@@ -7,7 +7,7 @@ import Logo from "../../assets/Logo.png"
 const Footer = () => {
     return (
         <>
-            <footer className='lg:flex bg-blue-900 px-10 xl:px-40 py-16 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
+            <footer className='lg:flex bg-primary px-4 xl:px-40 py-8 grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8'>
                 <div className='flex flex-col gap-3 flex-1'>
                     <div className='flex items-center gap-2 shrink-0'>
                         <img className='h-8 w-8' src={Logo} alt="" />
@@ -17,16 +17,16 @@ const Footer = () => {
                     </div>
                     <p className='text-gray-300 '>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ducimus harum ipsa pariatur, eaque, ipsam quos recusandae  </p>
                     <div className='flex items-center gap-3 py-3 cursor-pointer'>
-                        <div className='bg-white p-3 hover:bg-blue-700 hover:text-white transition-all duration-200 rounded-full'>
+                        <div className='bg-white p-3 hover:bg-blue-800 hover:text-white text-primary transition-all duration-200 rounded-full'>
                             <FaFacebookF className='text-lg  duration-200' />
                         </div>
-                        <div className='bg-white p-3 hover:bg-blue-700 hover:text-white transition-all duration-200 rounded-full'>
+                        <div className='bg-white p-3 hover:bg-blue-800 hover:text-white text-primary transition-all duration-200 rounded-full'>
                             <FaYoutube className='text-lg  duration-200' />
                         </div>
-                        <div className='bg-white p-3 hover:bg-blue-700 hover:text-white transition-all duration-200 rounded-full'>
+                        <div className='bg-white p-3 hover:bg-blue-800 hover:text-white text-primary transition-all duration-200 rounded-full'>
                             <FaTelegramPlane className='text-lg  duration-200' />
                         </div>
-                        <div className='bg-white p-3 hover:bg-blue-700 hover:text-white transition-all duration-200 rounded-full'>
+                        <div className='bg-white p-3 hover:bg-blue-800 hover:text-white text-primary transition-all duration-200 rounded-full'>
                             <FaTiktok className='text-lg  duration-200' />
                         </div>
                     </div>
@@ -112,7 +112,8 @@ const Footer = () => {
                     Copyright© 2026 PIKT || All Rights Reserved
                 </p>
                 <div>
-                    <button className='bg-blue-700 group p-2 sm:p-3 rounded-full text-white'>
+                    <button onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+                        className='bg-primary group p-2 sm:p-3 rounded-full text-white'>
                         <FaArrowUp className='text-sm group-hover:translate-y-1 transition-all duration-110' />
                     </button>
                 </div>

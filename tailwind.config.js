@@ -11,6 +11,9 @@ export default {
         playfair: ['Playfair Display', 'serif'],
         share: ['"Share Tech"', 'sans-serif'],
       },
+      colors: {
+        primary: '#003070',
+      },
 
     },
   },

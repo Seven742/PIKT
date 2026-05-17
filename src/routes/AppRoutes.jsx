@@ -7,6 +7,8 @@ import About from "../Page/About"
 import Courses from "../Page/Courses"
 import Contact from "../Page/Contact"
 import NotFound from "../Page/NotFound"
+import Historys from '../Page/Historys'
+
 
 const AppRoutes = () => {
     return (
@@ -16,6 +18,7 @@ const AppRoutes = () => {
                 <Route path='about' element={<About />} />
                 <Route path='courses' element={<Courses />} />
                 <Route path='contact' element={<Contact />} />
+                <Route path='history' element={<Historys />} />
             </Route>
             <Route path='*' element={<NotFound />} />
         </Routes>
