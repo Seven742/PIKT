@@ -8,6 +8,8 @@ import Courses from "../Page/Courses"
 import Contact from "../Page/Contact"
 import NotFound from "../Page/NotFound"
 import Historys from '../Page/Historys'
+import Teachers from '../Page/Teachers'
+import Licenses from '../Page/Licenses'
 
 
 const AppRoutes = () => {
@@ -19,6 +21,8 @@ const AppRoutes = () => {
                 <Route path='courses' element={<Courses />} />
                 <Route path='contact' element={<Contact />} />
                 <Route path='history' element={<Historys />} />
+                <Route path='teacher' element={<Teachers />} />
+                <Route path='license' element={<Licenses />} />
             </Route>
             <Route path='*' element={<NotFound />} />
         </Routes>

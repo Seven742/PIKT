@@ -132,15 +132,15 @@ const Navbar = () => {
                                 {/* use dropdowns.About to call useState true or false */}
                                 {dropdowns.About && (
                                     <div className=" left-0 w-full rounded-sm bg-primary text-white transition-all duration-200 cursor-pointer">
-                                        <a href="/history"><p className="pl-9 py-2 text-md  hover:bg-blue-900">History</p></a>
-                                        <a href=""><p className="pl-9 py-2 text-md  hover:bg-blue-900">Teacher</p></a>
-                                        <a href="">
-                                            <p className="pl-9 py-2 text-md hover:bg-blue-900">
+                                        <a href="/history"><p className="pl-9 py-2 text-md hover:text-gray-400">History</p></a>
+                                        <a href="/teacher"><p className="pl-9 py-2 text-md  hover:text-gray-400">Teacher</p></a>
+                                        <a href="/license">
+                                            <p className="pl-9 py-2 text-md hover:text-gray-400">
                                                 License-and-Accreditation
                                             </p>
                                         </a>
                                         <a href="">
-                                            <p className="pl-9 py-2 text-md hover:bg-blue-900">
+                                            <p className="pl-9 py-2 text-md hover:text-gray-400">
                                                 Career Opportunities
                                             </p>
                                         </a>
@@ -261,12 +261,12 @@ const Navbar = () => {
                                     {activeMenu === "about" && (
                                         <div className="absolute top-full left-0 w-56 rounded-sm bg-primary text-white cursor-pointer">
                                             <a href="/history"><p className="px-4 py-2 hover:bg-blue-900">History</p></a>
-                                            <a href="">
+                                            <a href="/teacher">
                                                 <p className="px-4 py-2 hover:bg-blue-900">
                                                     Teacher
                                                 </p>
                                             </a>
-                                            <a href="">
+                                            <a href="/license">
                                                 <p className="px-4 py-2 hover:bg-blue-900">
                                                     License-and-Accreditation
                                                 </p>
@@ -335,7 +335,7 @@ const Navbar = () => {
                                             </a>
                                             <a href="">
                                                 <p className="px-4 py-2 hover:bg-blue-900">
-                                                    View all Course
+                                                    All Course
                                                 </p>
                                             </a>
                                         </div>

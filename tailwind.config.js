@@ -10,6 +10,9 @@ export default {
         supermercado: ['Supermercado One', 'cursive'],
         playfair: ['Playfair Display', 'serif'],
         share: ['"Share Tech"', 'sans-serif'],
+        koulen: ["Koulen", "sans-serif"],
+        moul: ["Moul", "serif"],
+        battambang: ["Battambang", "sans-serif"],
       },
       colors: {
         primary: '#003070',
