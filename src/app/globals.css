@@ -1,0 +1,57 @@
+@import "tailwindcss";
+
+@theme {
+  --font-supermercado: "Supermercado One", cursive;
+  --font-playfair: "Playfair Display", serif;
+  --font-share: "Share Tech", sans-serif;
+  --font-koulen: "Koulen", sans-serif;
+  --font-moul: "Moul", serif;
+  --font-battambang: "Battambang", sans-serif;
+  --color-primary: #003070;
+}
+
+@layer base {
+  /* Tailwind v4 defaults borders to currentColor; keep the v3 look. */
+  *,
+  ::after,
+  ::before,
+  ::backdrop,
+  ::file-selector-button {
+    border-color: var(--color-gray-200, currentColor);
+  }
+  html {
+    scroll-behavior: smooth;
+  }
+  body {
+    font-family: "Battambang", sans-serif;
+    @apply text-gray-800;
+  }
+  * {
+    box-sizing: border-box;
+  }
+  button:not(:disabled),
+  [role="button"]:not(:disabled) {
+    cursor: pointer;
+  }
+}
+
+@layer components {
+  .page-header {
+    @apply bg-primary py-8 xl:py-12 px-4 xl:px-40;
+  }
+  .page-title {
+    @apply font-moul text-white text-2xl xl:text-4xl;
+  }
+  .section {
+    @apply px-4 xl:px-40 py-12 xl:py-16;
+  }
+  .card {
+    @apply bg-white rounded-xl border border-gray-100 shadow-xs hover:shadow-md transition-shadow duration-300;
+  }
+  .btn-primary {
+    @apply bg-primary text-white font-battambang px-6 py-2.5 rounded-lg hover:bg-blue-900 transition-all duration-200;
+  }
+  .btn-outline {
+    @apply border-2 border-primary text-primary font-battambang px-6 py-2.5 rounded-lg hover:bg-primary hover:text-white transition-all duration-200;
+  }
+}
