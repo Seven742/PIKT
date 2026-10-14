@@ -25,9 +25,9 @@ const Footer = () => (
           <div className="flex items-center gap-3">
             {[
               { icon: <FaFacebookF />, hover: 'hover:bg-blue-600' },
-              { icon: <FaYoutube />,   hover: 'hover:bg-red-600' },
+              { icon: <FaYoutube />, hover: 'hover:bg-red-600' },
               { icon: <FaTelegramPlane />, hover: 'hover:bg-sky-500' },
-              { icon: <FaTiktok />,    hover: 'hover:bg-gray-700' },
+              { icon: <FaTiktok />, hover: 'hover:bg-gray-700' },
             ].map((s, i) => (
               <a key={i} href="#" className={`w-9 h-9 rounded-full bg-white/10 flex items-center justify-center text-sm ${s.hover} transition-colors duration-200`}>
                 {s.icon}
@@ -41,13 +41,13 @@ const Footer = () => (
           <h3 className="font-moul text-white text-base mb-5 pb-3 border-b border-white/10">តំណភ្ជាប់</h3>
           <ul className="space-y-2.5">
             {[
-              { label: 'ទំព័រដើម',            to: '/' },
-              { label: 'ប្រវត្តិ PIKT',        to: '/history' },
-              { label: 'អំពីយើង',              to: '/about' },
-              { label: 'គ្រូបង្រៀន',           to: '/teacher' },
-              { label: 'ព័ត៌មាន',              to: '/news' },
-              { label: 'ភាពសហប្រតិបត្តិការ',  to: '/cooperation' },
-              { label: 'ទំនាក់ទំនង',           to: '/contact' },
+              { label: 'ទំព័រដើម', to: '/' },
+              { label: 'ប្រវត្តិ PIKT', to: '/history' },
+              { label: 'អំពីយើង', to: '/about' },
+              { label: 'គ្រូបង្រៀន', to: '/teacher' },
+              { label: 'ព័ត៌មាន', to: '/news' },
+              { label: 'ភាពសហប្រតិបត្តិការ', to: '/cooperation' },
+              { label: 'ទំនាក់ទំនង', to: '/contact' },
             ].map((l, i) => (
               <li key={i}>
                 <Link href={l.to} className="flex items-center gap-2 font-battambang text-sm text-blue-200 hover:text-white transition-colors group">
@@ -62,7 +62,7 @@ const Footer = () => (
         <div>
           <h3 className="font-moul text-white text-base mb-5 pb-3 border-b border-white/10">ឯកទេសសិក្សា</h3>
           <ul className="space-y-2.5">
-            {['បច្ចេកវិទ្យាព័ត៌មាន','អគ្គិសនី','យន្តសាស្ត្រ','គ្រប់គ្រងពាណិជ្ជកម្ម','គណនេយ្យ','កសិកម្ម'].map((l, i) => (
+            {['បច្ចេកវិទ្យាព័ត៌មាន', 'អគ្គិសនី', 'យន្តសាស្ត្រ', 'គ្រប់គ្រងពាណិជ្ជកម្ម', 'គណនេយ្យ', 'កសិកម្ម'].map((l, i) => (
               <li key={i}>
                 <Link href="/courses" className="flex items-center gap-2 font-battambang text-sm text-blue-200 hover:text-white transition-colors group">
                   <FiChevronRight className="text-xs group-hover:translate-x-1 transition-transform" />{l}
