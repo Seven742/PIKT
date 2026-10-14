@@ -11,12 +11,29 @@ const USERNAME = process.env.ADMIN_USERNAME || "admin";
 const PASSWORD = process.argv[2] || process.env.ADMIN_PASSWORD || "pikt2024";
 const NAME = "Admin PIKT";
 
+const isLocalhost =
+  !process.env.DB_HOST ||
+  process.env.DB_HOST === "localhost" ||
+  process.env.DB_HOST === "127.0.0.1";
+
+const useSSL =
+  process.env.DB_SSL === "true" ||
+  (process.env.DB_SSL !== "false" && !isLocalhost);
+
 const pool = mysql.createPool({
   host: process.env.DB_HOST,
   user: process.env.DB_USER,
   password: process.env.DB_PASSWORD,
   database: process.env.DB_NAME,
   port: process.env.DB_PORT ? Number(process.env.DB_PORT) : undefined,
+  ...(useSSL
+    ? {
+        ssl: {
+          minVersion: "TLSv1.2",
+          rejectUnauthorized: true,
+        },
+      }
+    : {}),
 });
 
 try {
