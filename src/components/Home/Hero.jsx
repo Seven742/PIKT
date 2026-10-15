@@ -59,28 +59,36 @@ const Hero = () => {
       {/* Slideshow */}
       <div className="relative w-full h-[440px] md:h-[540px] xl:h-[640px] overflow-hidden">
         {slides.map((s, i) => (
-          <div key={i} className={`absolute inset-0 transition-opacity duration-1000 ${i === current ? 'opacity-100' : 'opacity-0'}`}>
+          <div key={i} className={`absolute inset-0 transition-opacity duration-1000 ${i === current ? 'opacity-100' : 'opacity-0 pointer-events-none'}`}>
             <Image src={s.img} alt={s.title} sizes="100vw" priority={i === 0} className="w-full h-full object-cover" />
             <div className="absolute inset-0 bg-gradient-to-r from-black/70 via-black/40 to-transparent" />
           </div>
         ))}
-        <div className="absolute inset-0 flex items-center xl:px-40 px-6">
-          <div className="max-w-2xl text-white">
+        <div className="absolute inset-0 flex items-center xl:px-40 px-6 z-10 pointer-events-none">
+          <div className="max-w-2xl text-white pointer-events-auto">
             <p className="font-battambang text-blue-300 text-sm mb-3 tracking-widest uppercase">វិទ្យាស្ថានពហុបច្ចេកទេស ខេត្តកំពង់ធំ</p>
-            {slides.map((s, i) => (
-              <div key={i} className={`transition-all duration-700 ${i === current ? 'opacity-100 translate-y-0' : 'opacity-0 translate-y-4 absolute'}`}>
-                <h1 className="font-moul text-3xl md:text-4xl xl:text-5xl leading-relaxed my-6">{s.title}</h1>
-                <p className="font-battambang text-lg text-gray-200 mb-8">{s.sub}</p>
-              </div>
-            ))}
-            <div className="flex gap-3 flex-wrap mt-16 md:mt-20">
+            <div className="grid">
+              {slides.map((s, i) => (
+                <div
+                  key={i}
+                  className={`col-start-1 row-start-1 transition-all duration-700 ${i === current
+                    ? 'opacity-100 translate-y-0 pointer-events-auto'
+                    : 'opacity-0 translate-y-4 pointer-events-none'
+                    }`}
+                >
+                  <h1 className="font-moul text-3xl md:text-4xl xl:text-5xl leading-relaxed my-4 md:my-6">{s.title}</h1>
+                  <p className="font-battambang text-lg text-gray-200 mb-6 md:mb-8">{s.sub}</p>
+                </div>
+              ))}
+            </div>
+            <div className="relative z-20 flex gap-3 flex-wrap">
               <Link href="/courses">
-                <button className="bg-primary hover:bg-blue-900 text-white font-battambang px-7 py-3 rounded-lg flex items-center gap-2 transition-all">
+                <button className="bg-primary hover:bg-blue-900 text-white font-battambang px-7 py-3 rounded-lg flex items-center gap-2 transition-all cursor-pointer">
                   ស្វែងយល់ Course <FiArrowRight />
                 </button>
               </Link>
               <Link href="/history">
-                <button className="border-2 border-white/70 hover:border-white hover:bg-white/10 text-white font-battambang px-7 py-3 rounded-lg transition-all">
+                <button className="border-2 border-white/70 hover:border-white hover:bg-white/10 text-white font-battambang px-7 py-3 rounded-lg transition-all cursor-pointer">
                   ប្រវត្តិ PIKT
                 </button>
               </Link>
@@ -88,17 +96,17 @@ const Hero = () => {
           </div>
         </div>
         <button onClick={() => setCurrent(c => (c - 1 + slides.length) % slides.length)}
-          className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/30 hover:bg-black/60 text-white rounded-full flex items-center justify-center transition-all">
+          className="absolute left-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/30 hover:bg-black/60 text-white rounded-full flex items-center justify-center transition-all z-20 cursor-pointer">
           <FiChevronLeft className="text-xl" />
         </button>
         <button onClick={() => setCurrent(c => (c + 1) % slides.length)}
-          className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/30 hover:bg-black/60 text-white rounded-full flex items-center justify-center transition-all">
+          className="absolute right-4 top-1/2 -translate-y-1/2 w-10 h-10 bg-black/30 hover:bg-black/60 text-white rounded-full flex items-center justify-center transition-all z-20 cursor-pointer">
           <FiChevronRight className="text-xl" />
         </button>
-        <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-2">
+        <div className="absolute bottom-5 left-1/2 -translate-x-1/2 flex gap-2 z-20">
           {slides.map((_, i) => (
             <button key={i} onClick={() => setCurrent(i)}
-              className={`rounded-full transition-all duration-300 ${i === current ? 'w-6 h-2.5 bg-white' : 'w-2.5 h-2.5 bg-white/40'}`} />
+              className={`rounded-full transition-all duration-300 cursor-pointer ${i === current ? 'w-6 h-2.5 bg-white' : 'w-2.5 h-2.5 bg-white/40'}`} />
           ))}
         </div>
       </div>
