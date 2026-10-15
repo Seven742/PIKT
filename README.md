@@ -229,6 +229,6 @@ You can verify that all environment variables and database connections are opera
 
 ## 📄 License & Credits
 
-Developed for **វិទ្យាស្ថានពហុបច្ចេកទេស ខេត្តកំពង់ធំ (Polytechnic Institute of Kampong Thom - PIKT)**.
-Developed by: Sai Koemsean
+Developed for **វិទ្យាស្ថានពហុបច្ចេកទេស ខេត្តកំពង់ធំ (Polytechnic Institute of Kampong Thom - PIKT)**. <br/>
+Developed by: Sai Koemsean <br/>
 All rights reserved © 2026.
